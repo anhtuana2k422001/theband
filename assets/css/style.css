@@ -1,0 +1,527 @@
+/* Reset CSS  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /* cuộn trang tới vị trí chọn  */
+    scroll-behavior: smooth;
+    /* Sửa lại chữ cho cả website--> làm mất đi chữ gạch chấn để web đẹp hơn  */
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Nguyên tắc : 
+1. Từ ngoài vào trong 
+2.Từ trên xuống dưới
+3.Từ tổng quan đến chí tiết 
+ */
+
+ /* 1. Vị trí 
+ 2. Kích thước (wight,heigh)
+ 3. Màu sắc
+ 4. Kiểu dáng  */
+
+/* common : cái dùng chung  */
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.mt-32{
+    margin-top: 32px !important;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* tạ một elemen giả
+SỬ dụng hàm này thì k cần sử dụng clear nữa , muốn clear phải có display */
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+
+.col-third{
+    width: calc(100% / 3);
+    /* .6 số 3 thôi */
+    /* width: 33,33333333%; */
+}
+
+
+.col-half{
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+
+.clear{
+    clear: both;
+}
+
+.text-while{
+    color: white !important;
+}
+
+.text-center{
+    /* căn giữa ảnh và name */
+    text-align: center !important;
+}
+
+.full-right{
+    float: right;
+}
+
+.btn{
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 11px 16px;
+    /* bị dính padding:  nên che mất --- xử lý dùng inset-block: ; */
+    display: inline-block;
+    margin-top: 15px;
+    /* bỏ viền  */
+    border: none;
+}
+
+.btn:hover{
+    color: black;
+    background-color: #ccc;
+    /* hover con trỏ chuột  */
+    cursor: pointer;
+}
+
+/* main */
+#main{
+
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: black;
+    z-index: 1;
+    /* z-index:  khắc phục hình ảnh khi lướt lên phần slider ; giá trị 1 tăng dần 
+    giúp ảnh chiu xuống phần header --lí do là position fixd làm ảnh nổi lên  */
+
+  
+}
+
+#nav{
+    display: inline-block;
+}
+/* --> Bỏ dấu chấm đàng trước của các thẻ li của thẻ Li  nên css vào thẻ ul cho gọn */
+#nav, .subnav{
+    list-style-type: none;
+    /* kiểu của danh sách là dấu chấm nên phải bỏ đi */
+
+}
+
+#nav > li{
+    display: inline-block;
+
+}
+
+#nav li{
+    /* display: inline-block; */
+       /* chỉ cho thằng li ở cấp 1 có thuộc tính hover  */
+    /* --- >nên chặn  */
+    position: relative;
+}
+
+/* là con trực tiếp thì cho màu trắng để không bị ảnh hưởng */
+#nav>li>a{
+    color: white;   
+    /* text-transform:  là kiểu chữ ; */
+    text-transform: uppercase;  
+}
+
+#nav li a {
+    /* mặc định là chữ gạch chân, bỏ mặc đinh bằng cách none */
+    text-decoration: none; 
+    /* đặt chiều cao của chữ bằng header */
+    line-height: 46px;
+    padding: 0 24px;
+    /* bởi vì mặc đinh là inline nên không có tính chất xét chiều cao và chiêu ngang
+    nên dùng inline-block để ăn theo line-height: ; */
+    /* display: inline-block ; */
+    display: block;
+}
+
+/* #nav li:hover a{
+    color: black;
+    background-color: #ccc;
+} */
+/* --> sửa lại nếu là con trực tiếp thì hover */
+
+/* viết gộp ---> vì có thuộc tính giốn nhau ngăn cách bởi dấu phấy  */
+#nav .subnav li:hover a,
+#nav>li:hover>a{
+    color: black;
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav{
+    display: none;
+    min-width: 160px;
+    /* --> thêm top, left cho chắc chắn , nhưng không cần cũng đúng  */
+    top: 100%;
+    left: 0;;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#nav .subnav a{
+    color: black;
+}
+
+#nav .nav-arow-donwn{
+    font-size: 14px;
+    /* mặc đinh font-size icon là : 16px */
+}
+
+#header .mobile-menu-btn{ 
+    /* code cho moile  */
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: none;
+}
+
+#header .mobile-menu-btn,
+#header .search-bth{
+    float: right;
+    padding: 0px 21px;
+}
+
+/* tuc la hover xong roi css lại menu-icon --- chỉ css hocver menu-icon */
+#header .mobile-menu-btn:hover .menu-icon{
+    background-color: #ccc;
+    color: black;
+}
+
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+
+
+#header .search-bth:hover{
+    background-color: #f44336!important;
+    cursor: pointer;
+}
+
+#header .menu-icon,
+#header .seach-icon{
+    color: white;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    /* được hiểu là 50% của chiều ngang  */
+    padding-top: 50%;
+    /* background:  url("./assets/img/slider/slider1.jpg") top center / cover no-repeat; */
+    /* thẻ img ngang hàng với css nên dùng ../ là được  */
+    background:  url("../img/slider/slider1.jpg") top center / cover no-repeat;
+    /* background: url('https://www.w3schools.com/w3images/ny.jpg') top center / cover no-repeat;  */
+}
+
+#slider .text-content{
+    position:  absolute;
+    bottom: 47px;
+    color: white;
+    /* dùng left 50% những chữ vẫn chưa căn giữa  */
+    /* c1: */
+    /* left: 50%; */
+    /* transform: translate(-50%);
+    text-align: center; */
+      /* c2: */
+     /* width: 100%;
+     text-align: center; */
+    /* c3: */
+     right: 0;
+     left: 0;
+     text-align: center; 
+     /* text-align:  ; trung tâm  */
+}
+
+#slider .text-heading{
+    /* giảm độ giày của chữ h2 : từ 100-700 */
+    font-weight: 500;
+    font-size: 24px;
+    margin: 10px;
+}
+
+#slider .text-description{
+    font-size: 15x;
+    margin: 15px;
+    /* margin-top: 25px; */
+}
+
+#conten{
+ 
+}
+
+#conten .conten-section{
+    width: 800px;
+    /* max-width: giúp cho dạng table kéo 100 theo px dạng table */
+    max-width: 100%;
+    padding: 64px 0 112px; 
+/* margin-left: và margin - rigth để đẩy sang trái và đây sang phải --giúp căn giữa  */
+    margin-left: auto;
+    margin-right: auto;
+    /* căn chữ dạng table ---chõ chữ vào trong  */
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#conten .section-heading{
+    font-size: 30px;
+    /* làm mỏng chữ dùng font-weight: ; */
+    font-weight: 500; 
+    text-align: center;
+    /* Đẩy chữ cái cách rộng ra cho đẹp mắt  */
+    letter-spacing: 4px; 
+    text-transform: uppercase;
+}
+
+#conten .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    /* làm chữ nghiêng  -- dùng font-style: ; */
+    font-style: italic;
+    /* làm độ trong suốt giảm còn 60% -- hoặc cách khác tìm màu mờ .... */
+    opacity: 0.8;
+}
+
+#conten .about-text{
+    font-size: 15px;
+    margin-top: 30px;
+    /* Căn đều 2 bên của chữ như trang báo  */
+    text-align: justify ;
+    /* tạo khoảng cách của các dòng chữ , chiều cao của dòng chữ. Nếu tiếng việt nên đặt 1.6, tiếng anh đặt 1.4  */
+    line-height: 1.4;
+}
+
+#conten .member-list{
+    margin-top: 32px;
+}
+
+#conten .member-name{
+    font-size: 15px;
+}
+
+#conten .member-img{
+    width: 154px;
+    margin-top: 15px;
+    /* tạo góc bo cho ảnh dùng border-radius: ; */
+    border-radius: 4px;
+}
+
+.tour-section{
+    background: black;
+}
+
+.tickit-list{
+    background-color: white;
+    margin-top: 45px;
+}
+
+.tickit-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    /* bỏ dấu chấm của các thẻ li -- dùng list=style */
+    list-style: none;
+
+}
+
+.tickit-list .soul-out{
+    background: #f44336;
+    color: white;
+    padding: 3px;
+    margin-left: 15px
+}
+.tickit-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    color: white;
+    background-color : black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    /* dùng magin để chỉnh căn đứng giữa-- khi dùng phải có float mới dùng được margin âm */
+    margin-top: -2px;
+    margin-right: 15px;
+}
+
+
+/* place  */
+
+.place-list {
+    /* margin-top: 32px; */
+    /* sử dụng margin:  âm  khi có float : left ; để căn trái phải -- đầy là một kỹ thuật  */
+    /* margin-left: -8px;
+    margin-right: -8px;  */
+
+
+    /* viết gộp cho đep  */
+    margin-top: 16px;
+    /* padding-bottom: 48px; */
+}
+
+.place-img{
+    /* cho ảnh nằm gòn bên trong, không vượt quá để bằng kích thước của thẻ chứa nó palce-item */
+    width: 100%;
+    /* khoảng cách giữa ảnh và khối bên dưới nên sữa display: ;  */
+    display: block;
+}
+
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.palce-body{
+    background-color: white;
+    padding: 16px;
+    font-size: 15px;
+}
+
+
+.place-heading{
+    font-size: 15px;
+}
+
+
+.place-time{
+    margin-top: 15px;
+    opacity: 0.6 ;
+}
+
+.place-dest{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* contac-form */
+.contact-conten{
+    margin-top: 48px;
+}
+
+.contac-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* .contac-info i -- đặt vật cũng được nha */
+.contac-info i[class*="ti-"]{
+    /* nghĩa là  trong classs atibiu có chứa ti-  */
+    width: 30px;
+    /* Đẩy icon xa chữ ra vì đang mặc định là inline  */
+    display: inline-block;
+}
+
+.contac-info a{
+   color:  #0303d4;
+   opacity: 0.9;
+}
+
+.contac-info a:hover{
+    color: blue;
+    opacity: 1;
+ }
+
+.contac-form{
+    font-size: 15px;
+}
+
+.contac-form .form-control{
+    padding: 11px 5px;
+    border: 1p5x solid #ccc;
+    width: 100%;
+    /* màu vien cua o form  */
+    outline: none;
+}
+
+.contac-form .form-control:hover{
+    border: 1px solid black;
+}
+
+/* .form_submit{
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    float: right;
+    border: 1px solid #000;
+    /* bỏ cái viền bên ngoài, dùng boder none */
+    /* border: none; */ 
+/* }  */
+
+/* .form_submit:hover{
+    color: black;
+    background: #ccc !important;
+} */
+
+
+/* hàm phải có từ img nha  */
+.map-section img{
+    width: 100%;
+    height: auto;
+}
+
+#footer{
+    text-align: center;
+    padding: 64px 16px;
+}
+
+#footer .socials-list a{
+    color: rgba(0,0,0,0.6);
+    font-size: 24px;
+    /* bỏ gạch chân  */
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover{
+    color: rgba(0,0,0,0.3);
+}
+
+#footer .coppyright{
+    margin-top: 15px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.6);
+}
+
+#footer .coppyright a{
+    color: rgba(0,0,0,0.6);
+}
+

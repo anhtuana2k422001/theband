@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BAND</title>
+    <!-- link favicon html --- để tìm lấy link làm icon  -->
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4go0oquPmzMJPbil_GJFERiZg-l1w88xvNA&usqp=CAU" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- link responsive uu tien hon thi phai bo ben duoi  link style de code cho mobile  -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
+<body>
+    <div class="main">
+        <div id="header">
+            <!-- bắt đầu header -->
+            <ul id="nav">
+                <!-- # nghĩa là ở yên trang hiện tại không reload lại trang  -->
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contac">Contac</a></li>
+                <li><a href="#">
+                    More
+                    <i class="nav-arow-donwn ti-arrow-circle-down"></i>
+                </a>
+                    <ul class="subnav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- end header -->
+
+             <!-- bắt đầu mobile button  -->
+            <div id='mobile-menu' class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+
+            <!-- bắt đầu search button  -->
+                <div class="search-bth">
+                    <i class="seach-icon ti-search"></i>
+                </div> 
+            
+        </div>
+
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">Hồ Anh Tuấn </h2>
+                <div class="text-description">Học tập tốt - Đạo đức tốt - Tình nguyện tốt </div>
+            </div>
+        </div>
+
+        <!-- begin : conten  -->
+        <div id="conten">
+            <!-- about section -->
+            <div id="band" class="conten-section">
+                <h2 class="section-heading">THE BAND</h2>
+                <p class="section-sub-heading">Hồ Anh Tuấn</p>
+                <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="row member-list">
+                <div class="col col-third text-center s-col-full mt-32 ">
+                    <p class="member-name">Name1</p>
+                    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="" class="member-img">
+                   </div>
+
+                   <div class="col col-third text-center s-col-full mt-32">
+                    <p class="member-name">Name2</p>
+                    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="" class="member-img">
+                   </div>
+
+                   <div class=" col col-third text-center s-col-full mt-32 ">
+                    <p class="member-name">Name3</p>
+                    <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="" class="member-img">
+                   </div>
+
+                    <!-- dùng để ôm được thẻ con lad member khi dùng float
+                   <div class="clear"></div> -->
+
+                </div>
+            </div>
+
+             <!-- tour section -->
+             <div id='tour' class="tour-section">
+                 <div class="conten-section">
+                    <h2 class="section-heading text-while">Tour dates </h2>
+                    <p class="section-sub-heading text-while ">Remember to book your tickets!</p>
+
+                    <!-- tickets -->
+                    <ul class="tickit-list">
+                        <li>September <span class="soul-out">Sold out</span></li>
+                        <li>October  <span class="soul-out">Sold out</span></li>
+                        <li>November <span class="quantity">10</span></li>
+                    </ul>
+
+                    <!-- Place -->
+                    <div class=" row place-list">
+                        <div class="mt-16 col col-third s-col-full">
+                            <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="New York" class="place-img">
+                            <div class="palce-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-dest">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="#" class="btn s-full-width text-center ">Buy Tickets</a>
+                            </div>
+                        </div>
+
+                        <div class="mt-16 col col-third s-col-full">
+                            <img src="https://www.w3schools.com/w3images/paris.jpg" alt="Paris" class="place-img">
+                            <div class="palce-body">
+                                <h3 class="place-heading">Paris</h3>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-dest">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="#" class="btn s-full-width text-center ">Buy Tickets</a>
+                            </div>
+                        </div>
+
+                        <div class="mt-16 col col-third s-col-full">
+                            <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="San Francisco" class="place-img">
+                            <div class="palce-body">
+                                <h3 class="place-heading">San Francisco</h3>
+                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-dest">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="#" class="btn s-full-width text-center ">Buy Tickets</a>
+                            </div>
+                        </div>
+                        
+                   <!-- dùng để ôm được thẻ con lad member khi dùng float -->
+                          <!-- <div class="clear"></div> -->
+
+                    </div>
+
+                </div>
+             </div>
+
+            <!-- begin : contact section -->
+               <div id='contac' class="conten-section">
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-sub-heading">Fan? Drop a note!</p>
+              
+                <div class="row  contact-conten">
+                    <div class="col col-half contac-info s-col-full ">
+                        <p><i class="ti-location-pin"></i>Chicago, US</p>
+                        <p><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
+                        <p><i class="ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
+                    </div>
+
+                    <div class="col col-half contac-form s-col-full ">
+                        <form action="">
+                            <div class="row ">
+                                <div class="col col-half s-col-full">
+                                    <!-- placeholder để đặt tên input text bên trong --dùng required để bắt nhập vào ô  -->
+                                    <input type="text" name="" placeholder="Name" required id="" class="form-control s-solid">
+                                </div> 
+                                <div class="col col-half s-col-full s-mt8 ">
+                                    <!-- placeholder để đặt tên input text bên trong -- dùng required để bắt nhập vào ô  -->
+                                    <input type="email" name="" placeholder="Email" required id="" class="form-control s-solid">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <!-- dùng required để bắt nhập vào ô  -->
+                                    <input type="text" name="" placeholder="Message" required id="" class="form-control s-solid">
+                                </div> 
+                            </div>
+                            <input class="btn full-right mt-16 s-full-width" type="submit" value="SEND">
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- end : contac section  -->
+
+            <div class="map-section">
+                <img src="https://www.w3schools.com/w3images/map.jpg" alt="MAP">
+            </div>
+
+        </div>
+        <!-- begin : conten  -->
+
+        <div id="footer">
+            <div class="socials-list">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""><i class="ti-instagram"></i></a>
+                <a href=""><i class="ti-youtube"></i></a>
+                <a href=""><i class="ti-pinterest"></i></a>
+                <a href=""><i class="ti-twitter-alt"></i></a>
+                <a href=""><i class="ti-linkedin"></i></a>
+            </div>
+
+            <p class="coppyright">Powered by <a href="">w3.css </a></p>
+            
+        </div>
+
+    </div>
+
+    <!-- code jvascrip để đóng mở tap -- nằm trong thẻ body -->
+    <script>
+        // hiểu là lấy id 
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        /*- -dóng mở menu ----*/
+
+        mobileMenu.onclick = function(){
+            // lấy giá trị chiều cao của header 
+            // 1.... console.log(header.clientHeight);
+            var isClosed = header.clientHeight === headerHeight ;
+            if(isClosed) {
+                header.style.height= "auto";
+            }
+            else {
+                // ẩn nó đi 
+                header.style.height= null;
+            }
+        }
+
+        /*------ tự động đóng khi chọn menu ------*/
+// lấy ra tất cả các thẻ a 
+        var menuItens=document.querySelectorAll("#nav li a[href*='#'] ");
+        // console.log( menuItens);
+        for(var i=0; i<menuItens.length;i++)
+        {
+            var menuIten = menuItens[i];
+            // nextElementSibling tức là anh chi em liền kề đó 
+
+            //1... console.log(menuIten);
+            menuIten.onclick = function() {
+            var IsparenMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                // console.log(this);
+                if(IsparenMenu){
+                 // bỏ qua mặc đinh. gọi thẻ a là tới link herf---nên nó bỏ q
+                    event.preventDefault();
+                }else {
+                    // bỏ qua mặc đinh. gọi thẻ a là tới link herf---nên nó bỏ qua
+                    header.style.height= null;
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

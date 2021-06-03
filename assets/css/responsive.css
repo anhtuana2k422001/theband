@@ -1,0 +1,114 @@
+
+/* pc */
+@media (min-width: 1024px){
+}
+
+/* table */
+@media (min-width:740px) and (max-width:1023px){
+  .contac-info{
+    line-height: 2;
+  }
+
+ }
+
+
+ /* table - mobile */
+@media (max-width:1023px){
+  .btn{
+    padding: 13px 16px;
+  }
+
+  .contac-form .form-control {
+    padding: 14px 5px;
+  }
+
+  .contac-info{
+    line-height: 1.8;
+  }
+
+  
+  .socials-list{
+    font-size: 48px;
+    margin: 4px;
+  }
+
+  #footer .coppyright {
+    padding: 13px 0;
+    display: inline-block;
+  }
+
+ }
+
+/* mobile */
+@media (max-width:740px){
+
+  .s-mt8{
+    margin-top: 8px;
+  }
+  .s-full-width,
+  .s-col-full{
+    width: 100%;
+  }
+
+  #header{
+    overflow: hidden;
+  }
+  #header .mobile-menu-btn{
+    display: block;
+  }
+
+  #header .search-bth{
+    display: none;
+  }
+
+  #nav {
+    display: block;
+  }
+  
+  #nav li a{
+    /* cho các thanh thẻ to thêm để dễ bấm hơn  */
+    padding: 1px 24px;
+  }
+
+  #nav .subnav {
+    /* cái này để trên mobile cho hiển ra các thẻ ul 
+    trên mobile k cân position nên phải đưa về mặc định */
+     position: initial;  
+     background-color:#333;
+}
+
+#nav .subnav a{
+  color: white;
+  padding: 5px 41px;
+}
+  #nav > li{
+    /* cho thanh xuống hàng một  */
+    display: block;
+  }
+
+  #nav > li:first-child{
+    /* hàng đầu tiên home không cần click 100% để trọn trên mobile  */
+    display: inline-block;
+  }
+
+  #conten .member-img {
+    /* chỉnh kích cỡ ảnh trên mobile  */
+    width: 70%;
+  }
+
+  #conten .member-name{
+    margin-bottom: 8px;
+  }
+
+  .contac-form {
+    margin-top: 32px;
+  }
+
+  .s-solid{
+    border: 1px solid rgba(0,0,0,0.4) ;
+  }
+
+  .contac-form .s-solid:hover{
+    border: 1px solid black ;
+  }
+}
